@@ -12,7 +12,7 @@
 */
 
 // Display detected environment and connected database for debugging
-echo "Environment: ".App::environment()."<br>Database: ".DB::connection()->getDatabaseName();
+// echo "Environment: ".App::environment()."<br>Database: ".DB::connection()->getDatabaseName();
 
 Route::get('/', function()
 {
