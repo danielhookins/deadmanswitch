@@ -18,3 +18,8 @@ Route::get('/', function()
 {
 	return View::make('coming-soon');
 });
+
+Route::get('/login-signup', function()
+{
+	return View::make('login-signup');
+});
