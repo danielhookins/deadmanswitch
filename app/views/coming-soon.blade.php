@@ -5,9 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Coming Soon - Dead Man Switch</title>
-		<link href="<?php echo asset('_/css/bootstrap.css'); ?>" rel="stylesheet">
-		<link href="<?php echo asset('_/css/coming-soon.css'); ?>" rel="stylesheet">
-		<link href="<?php echo asset('http://fonts.googleapis.com/css?family=Lato|Alegreya:400,700'); ?>" rel='stylesheet' type='text/css'>
+		<link href="{{ URL::asset('_/css/bootstrap.css') }}" rel="stylesheet">
+		<link href="{{ URL::asset('_/css/coming-soon.css') }}" rel="stylesheet">
+		<link href="{{ URL::asset('http://fonts.googleapis.com/css?family=Lato|Alegreya:400,700') }}" rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -75,7 +75,7 @@
 		</footer>
 
 		<!-- SCRIPTS -->
-		<script src="<?php echo asset('_/js/bootstrap.js'); ?>"></script>
-		<script src="<?php echo asset('_/js/myscript.js'); ?>"></script>
+		<script src="{{ URL::asset('_/js/bootstrap.js') }}"></script>
+		<script src="{{ URL::asset('_/js/myscript.js') }}"></script>
 	</body>
 </html>
