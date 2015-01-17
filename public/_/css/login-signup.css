@@ -1,0 +1,104 @@
+/*
+    LOGIN-SIGN-UP
+    Three-col v.1.0 
+  http://hoodev.com
+
+ */
+
+* {
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f4f4;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* WRAPPER */
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -70px; 
+  background-image: url("../../images/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
+/* TOP-BAR */
+
+/* MAIN */
+
+#main {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#main .main-content {
+  margin-top: 70px;
+}
+
+.welcome-box h2 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 44px;
+  margin-bottom: 30px;
+  text-shadow: none;
+}
+
+.welcome-box p {
+  color: #fff;
+  font-size: 21px;
+  line-height: 31px;
+  text-shadow: none;
+}
+
+/* FOOTER */
+
+footer, .wrapper:after {
+  height: 70px; 
+}
+
+footer {
+  background-color: #1c1c1c;
+  padding: 15px 0px;
+  border-top: 1px solid rgba(114, 114, 114, 0.25);
+  color: #888;
+}
+
+#footer-bar a {
+  color: #c9c9c9;
+}
+
+#footer-bar a:hover {
+  color: #ffffff;
+}
+
+#footer-bar p {
+  font-size: 13px;
+  text-align: center;
+  margin: 0px;
+}
+
+@media (min-width: 767px) {
+  #footer-bar p {
+    text-align: left;
+  }
+}
