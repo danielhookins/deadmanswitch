@@ -31,9 +31,9 @@
 								<div class="col-md-7 col-md-offset-2">
 									<div class="panel panel-default">
 										<div class="panel-body">
-											{{ Form::open(array('url' => 'checkin')) }}
+											{{ Form::open(array('url'=>'checkin')) }}
 												<div class="form-group">
-													{{ Form::text('email', Input::old('email'), array('placeholder'=>'Enter your email', 'id'=>'user_email', 'class' => 'form-control')) }}
+													{{ Form::text('email', Input::old('email'), array('placeholder'=>'Enter your email', 'class'=>'form-control')) }}
 												</div>
 												<div class="form-group">
 													{{ Form::password('password', array('placeholder'=>'Password', 'class'=>'form-control' )) }}
@@ -44,7 +44,7 @@
 														{{ Form::checkbox('remember') }} Remember me
 													</label>
 												</div> -->
-												{{ Form::submit('Check in', ['class' => 'btn btn-primary']) }}
+												{{ Form::submit('Check in', ['class'=>'btn btn-primary']) }}
 											{{ Form::close() }}
 										</div>
 									</div>
@@ -57,21 +57,21 @@
 											<h3 class="panel-title"><strong>I'm new.</strong> Sign up</h3>
 										</div>
 										<div class="panel-body">
-											{{ Form::open(array('url' => 'signup')) }}
+											{{ Form::open(array('url'=>'signup')) }}
 												<div class="form-group">
-													<input type="input" class="form-control" id="new_name" placeholder="Enter your name">
+													{{ Form::text('full_name', Input::old('full_name'), array('placeholder'=>'Enter your name', 'class'=>'form-control')) }}
 												</div>
 												<div class="form-group">
-													{{ Form::text('new_email', Input::old('new_email'), array('placeholder'=>'Email', 'id'=>'new_email', 'class' => 'form-control')) }}
+													{{ Form::text('email', Input::old('email'), array('placeholder'=>'Email', 'class'=>'form-control')) }}
 												</div>
 												<div class="form-group">
-													{{ Form::password('new_password', array('placeholder'=>'Password', 'class'=>'form-control' )) }}
+													{{ Form::password('password', array('placeholder'=>'Password', 'class'=>'form-control' )) }}
 												</div>
 												<!-- only need password once
 												<div class="form-group">
-													{{ Form::password('new_password_again', array('placeholder'=>'Password again', 'class'=>'form-control' )) }}
+													{{ Form::password('password_again', array('placeholder'=>'Password again', 'class'=>'form-control' )) }}
 												</div> -->
-												{{ Form::submit('Sign up to create your Dead Man Switch', ['class' => 'btn btn-success']) }}
+												{{ Form::submit('Sign up to create your Dead Man Switch', ['class'=>'btn btn-success']) }}
 											{{ Form::close() }}
 										</div>
 									</div>
