@@ -14,22 +14,8 @@
 // Display detected environment and connected database for debugging
 // echo "Environment: ".App::environment()."<br>Database: ".DB::connection()->getDatabaseName();
 
-Route::get('/', function()
-{
-	return View::make('coming-soon');
-});
+Route::get('/', 'HomeController@showWelcome');
 
-Route::get('/checkin-signup', function()
-{
-	return View::make('checkin-signup');
-});
+Route::post('/checkin', 'CheckinController@doCheckin');
 
-Route::post('/checkin', function()
-{
-	return 'Check in.';
-});
-
-Route::post('/signup', function()
-{
-	return 'Sign up.';
-});
+Route::post('/signup', 'SignupController@doSignup');
