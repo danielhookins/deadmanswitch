@@ -31,20 +31,20 @@
 								<div class="col-md-7 col-md-offset-2">
 									<div class="panel panel-default">
 										<div class="panel-body">
-											<form>
+											{{ Form::open(array('url' => 'checkin-signup')) }}
 												<div class="form-group">
-													<input type="email" class="form-control" id="user_email" placeholder="Enter your email">
+													{{ Form::text('user_email', Input::old('user_email'), array('placeholder'=>'Enter your email', 'id'=>'user_email', 'class' => 'form-control')) }}
 												</div>
 												<div class="form-group">
-													<input type="password" class="form-control" id="user_password" placeholder="Password">
+													{{ Form::text('user_password', Input::old('user_password'), array('placeholder'=>'Password', 'id'=>'user_password', 'class' => 'form-control')) }}
 												</div>
 												<div class="checkbox">
 													<label>
-														<input type="checkbox"> Remember me
+														{{ Form::checkbox('user_remember') }} Remember me
 													</label>
 												</div>
-												<button type="submit" class="btn btn-primary">Check in</button>
-											</form>
+												{{ Form::submit('Check in', ['class' => 'btn btn-primary']) }}
+											{{ Form::close() }}
 										</div>
 									</div>
 								</div>
