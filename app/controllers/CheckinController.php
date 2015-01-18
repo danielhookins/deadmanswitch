@@ -7,9 +7,9 @@ class CheckinController extends BaseController {
 	
 		if (Auth::attempt(Input::only('email', 'password'))) 
 		{
-			return "Welcome ".Auth::user()->full_name;
+			return View::make('dashboard');
 		}
-		echo "failed.";
+		return Redirect::to('/')->with('message', 'Wrong username or password.');
 	}
 
 }

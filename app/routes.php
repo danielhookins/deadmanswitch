@@ -1,17 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
-// Display detected environment and connected database for debugging
+// DEBUGGING: Display detected environment and connected database
 // echo "Environment: ".App::environment()."<br>Database: ".DB::connection()->getDatabaseName();
 
 Route::get('/coming-soon', function() 
@@ -21,6 +10,12 @@ Route::get('/coming-soon', function()
 
 Route::get('/', 'HomeController@showWelcome');
 
-Route::post('/checkin', 'CheckinController@doCheckin');
-
 Route::post('/signup', 'SignupController@doSignup');
+Route::post('/checkin', 'CheckinController@doCheckin');
+Route::get('/logout', function()
+{
+	Auth::logout();
+	return Redirect::to('/')->with('message', 'You have logged out.');	//TODO: Build nice logged out page.
+});	//TODO: Move to controller.
+
+Route::get('/dashboard', 'DashboardController@showDashboard');
