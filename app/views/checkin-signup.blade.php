@@ -31,7 +31,7 @@
 								<div class="col-md-7 col-md-offset-2">
 									<div class="panel panel-default">
 										<div class="panel-body">
-											{{ Form::open(array('url' => 'checkin-signup')) }}
+											{{ Form::open(array('url' => 'checkin')) }}
 												<div class="form-group">
 													{{ Form::text('user_email', Input::old('user_email'), array('placeholder'=>'Enter your email', 'id'=>'user_email', 'class' => 'form-control')) }}
 												</div>
@@ -56,21 +56,22 @@
 											<h3 class="panel-title"><strong>I'm new.</strong> Sign up</h3>
 										</div>
 										<div class="panel-body">
-											<form>
+											{{ Form::open(array('url' => 'signup')) }}
 												<div class="form-group">
 													<input type="input" class="form-control" id="new_name" placeholder="Enter your name">
 												</div>
 												<div class="form-group">
-													<input type="email" class="form-control" id="new_email" placeholder="Email">
+													{{ Form::text('new_email', Input::old('new_email'), array('placeholder'=>'Email', 'id'=>'new_email', 'class' => 'form-control')) }}
 												</div>
 												<div class="form-group">
-													<input type="password" class="form-control" id="new_password" placeholder="Password">
+													{{ Form::text('new_password', Input::old('new_password'), array('placeholder'=>'Password', 'id'=>'new_password', 'class' => 'form-control')) }}
 												</div>
+												<!-- only need password once
 												<div class="form-group">
-													<input type="password" class="form-control" id="new_password_again" placeholder="Password again">
-												</div>
-												<button type="submit" class="btn btn-success">Sign up to create your Dead Man Switch</button>
-											</form>
+													{{ Form::text('new_password_again', Input::old('new_password_again'), array('placeholder'=>'Password again', 'id'=>'new_password_again', 'class' => 'form-control')) }}
+												</div> -->
+												{{ Form::submit('Sign up to create your Dead Man Switch', ['class' => 'btn btn-success']) }}
+											{{ Form::close() }}
 										</div>
 									</div>
 							  	</div>

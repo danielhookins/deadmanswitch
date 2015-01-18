@@ -23,3 +23,13 @@ Route::get('/checkin-signup', function()
 {
 	return View::make('checkin-signup');
 });
+
+Route::post('/checkin', function()
+{
+	return 'Check in.';
+});
+
+Route::post('/signup', function()
+{
+	return 'Sign up.';
+});
