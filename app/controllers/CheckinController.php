@@ -4,10 +4,12 @@ class CheckinController extends BaseController {
 
 	public function doCheckin()
 	{
-		
-		// DEBUG: dump data
-		$input = Input::all();
-		dd($input);
+	
+		if (Auth::attempt(Input::only('email', 'password'))) 
+		{
+			return "Welcome ".Auth::user()->full_name;
+		}
+		echo "failed.";
 	}
 
 }

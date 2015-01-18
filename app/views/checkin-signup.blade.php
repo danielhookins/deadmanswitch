@@ -33,16 +33,17 @@
 										<div class="panel-body">
 											{{ Form::open(array('url' => 'checkin')) }}
 												<div class="form-group">
-													{{ Form::text('user_email', Input::old('user_email'), array('placeholder'=>'Enter your email', 'id'=>'user_email', 'class' => 'form-control')) }}
+													{{ Form::text('email', Input::old('email'), array('placeholder'=>'Enter your email', 'id'=>'user_email', 'class' => 'form-control')) }}
 												</div>
 												<div class="form-group">
-													{{ Form::password('user_password', array('placeholder'=>'Password', 'class'=>'form-control' )) }}
+													{{ Form::password('password', array('placeholder'=>'Password', 'class'=>'form-control' )) }}
 												</div>
+												<!--
 												<div class="checkbox">
 													<label>
-														{{ Form::checkbox('user_remember') }} Remember me
+														{{ Form::checkbox('remember') }} Remember me
 													</label>
-												</div>
+												</div> -->
 												{{ Form::submit('Check in', ['class' => 'btn btn-primary']) }}
 											{{ Form::close() }}
 										</div>
