@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Dead Man Switch - Check in or Sign up</title>
 		<link href="{{ asset('_/css/bootstrap.css') }}" rel="stylesheet">
-		<link href="{{ asset('_/css/login-signup.css') }}" rel="stylesheet">
+		<link href="{{ asset('_/css/checkin-signup.css') }}" rel="stylesheet">
 		<link href="{{ asset('http://fonts.googleapis.com/css?family=Lato|Alegreya:400,700') }}" rel='stylesheet' type='text/css'>
 	</head>
 	<body>
