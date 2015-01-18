@@ -36,7 +36,7 @@
 													{{ Form::text('user_email', Input::old('user_email'), array('placeholder'=>'Enter your email', 'id'=>'user_email', 'class' => 'form-control')) }}
 												</div>
 												<div class="form-group">
-													{{ Form::text('user_password', Input::old('user_password'), array('placeholder'=>'Password', 'id'=>'user_password', 'class' => 'form-control')) }}
+													{{ Form::password('user_password', array('placeholder'=>'Password', 'class'=>'form-control' )) }}
 												</div>
 												<div class="checkbox">
 													<label>
@@ -64,11 +64,11 @@
 													{{ Form::text('new_email', Input::old('new_email'), array('placeholder'=>'Email', 'id'=>'new_email', 'class' => 'form-control')) }}
 												</div>
 												<div class="form-group">
-													{{ Form::text('new_password', Input::old('new_password'), array('placeholder'=>'Password', 'id'=>'new_password', 'class' => 'form-control')) }}
+													{{ Form::password('new_password', array('placeholder'=>'Password', 'class'=>'form-control' )) }}
 												</div>
 												<!-- only need password once
 												<div class="form-group">
-													{{ Form::text('new_password_again', Input::old('new_password_again'), array('placeholder'=>'Password again', 'id'=>'new_password_again', 'class' => 'form-control')) }}
+													{{ Form::password('new_password_again', array('placeholder'=>'Password again', 'class'=>'form-control' )) }}
 												</div> -->
 												{{ Form::submit('Sign up to create your Dead Man Switch', ['class' => 'btn btn-success']) }}
 											{{ Form::close() }}

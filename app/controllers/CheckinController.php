@@ -4,7 +4,10 @@ class CheckinController extends BaseController {
 
 	public function doCheckin()
 	{
-		return 'Check in...';
+		
+		// DEBUG: dump data
+		$input = Input::all();
+		dd($input);
 	}
 
 }

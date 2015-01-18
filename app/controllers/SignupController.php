@@ -4,7 +4,10 @@ class SignupController extends BaseController {
 
 	public function doSignup()
 	{
-		return 'Sign up...';
+		
+		// DEBUG: dump data
+		$input = Input::all();
+		dd($input);
 	}
 
 }
