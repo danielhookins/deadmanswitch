@@ -16,7 +16,7 @@ class CreateUsers extends Migration {
 			{
 				$newtable -> increments('id');
 				$newtable -> string('email');
-				$newtable -> string('full_name', 127);
+				$newtable -> string('name', 127);
 				$newtable -> string('password');
 				$newtable -> string('remember_token', 100);
 				$newtable -> dateTime('last_login');

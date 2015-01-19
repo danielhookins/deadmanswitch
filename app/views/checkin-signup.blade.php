@@ -11,7 +11,26 @@
 	</head>
 	<body>
 		<div class="wrapper">
-
+			<!-- MESSAGES -->
+			<section id="messages">
+				@if (Session::has('message'))
+					<div class="alert alert-info alert-dismissible" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					  <p>{{ Session::get('message'); }}</p>
+					</div>
+				@endif
+				@if ($errors)
+					@if ($errors->has())
+			        <div class="alert alert-warning alert-dismissible" role="alert">
+				  		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			            <strong>Oops... </strong> 
+			            @foreach ($errors->all() as $error)
+			                {{ $error }}<br>        
+			            @endforeach
+			        </div>
+			        @endif
+				@endif
+			</section> <!-- /.MESSAGES -->
 			<!-- MAIN -->
 			<section id="main">
 				<div class="container main-content">
@@ -59,7 +78,7 @@
 										<div class="panel-body">
 											{{ Form::open(array('url'=>'signup')) }}
 												<div class="form-group">
-													{{ Form::text('full_name', Input::old('full_name'), array('placeholder'=>'Enter your name', 'class'=>'form-control')) }}
+													{{ Form::text('name', Input::old('name'), array('placeholder'=>'Enter your name', 'class'=>'form-control')) }}
 												</div>
 												<div class="form-group">
 													{{ Form::text('email', Input::old('email'), array('placeholder'=>'Email', 'class'=>'form-control')) }}

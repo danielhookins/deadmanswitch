@@ -26,7 +26,7 @@ class UserTableSeeder extends Seeder {
 
         User::create(array(
         	'email' 			=>	$_ENV['DEFAULT_EMAIL'],
-        	'full_name'			=>	$_ENV['DEFAULT_NAME'],
+        	'name'			    =>	$_ENV['DEFAULT_NAME'],
         	'password'			=>	Hash::make($_ENV['DEFAULT_PASSWORD']),
         	'remember_token'	=>	str_random(100),
         	'last_login'		=>	\Carbon\Carbon::now()

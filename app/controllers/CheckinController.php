@@ -9,7 +9,8 @@ class CheckinController extends BaseController {
 		{
 			return View::make('dashboard');
 		}
-		return Redirect::to('/')->with('message', 'Wrong username or password.');
+
+		return Redirect::to('/')->withErrors('Wrong username or password.');
 	}
 
 }
