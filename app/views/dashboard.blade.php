@@ -19,14 +19,13 @@
 				  <div class="container-fluid">
 					<div class="navbar-header">
 						<div class="logo">
-							<h1><a href="index.php">DMS</a></h1>
+							<h1><a href="{{ URL::to('/dashboard') }}">DMS</a></h1>
 						</div>
 					</div>
 				  <p class="navbar-text">Hello there {{ Auth::user()->name }}. [ <a href="{{ URL::to('/logout') }}">Log out</a> ]</p>
 				  </div>
 				</nav>
 			</section> <!-- /.TOP-BAR -->
-		
 		
 			<div class="container"> 
 				<div class="row full-row">
@@ -35,7 +34,7 @@
 					<!--LEFT-BAR -->
 					<div id="left-bar" class="col-md-3 sidebar-col">
 						<div class="list-group">
-						  <a href="index.php" class="list-group-item active">
+						  <a href="{{ URL::to('/dashboard') }}" class="list-group-item active">
 							<h4 class="list-group-item-heading">Dashboard</h4>
 						    <p class="list-group-item-text">Your Dead Man Switch summary.</p>
 						  </a>
@@ -57,8 +56,7 @@
 					<!--MAIN-CONTENT -->
 					<div id="main-content" class="col-md-8 main-col">
 						<ol class="breadcrumb">
-						  <li class="active"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <a href="#">Dashboard</a></li>
-						  <li ></li>
+						  <li class="active"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <a href="{{ URL::to('/dashboard') }}">Dashboard</a></li>
 						</ol>	
 
 						<p>Hey there.  Here is a summary of your account.</p>
