@@ -50,7 +50,7 @@
 								<div class="col-md-7 col-md-offset-2">
 									<div class="panel panel-default">
 										<div class="panel-body">
-											{{ Form::open(array('url'=>'checkin')) }}
+											{{ Form::open(array('route' => 'session.store')) }}
 												<div class="form-group">
 													{{ Form::text('email', Input::old('email'), array('placeholder'=>'Enter your email', 'class'=>'form-control')) }}
 												</div>
@@ -76,7 +76,7 @@
 											<h3 class="panel-title"><strong>I'm new.</strong> Sign up</h3>
 										</div>
 										<div class="panel-body">
-											{{ Form::open(array('url'=>'signup')) }}
+											{{ Form::open(array('route' => 'user.store')) }}
 												<div class="form-group">
 													{{ Form::text('name', Input::old('name'), array('placeholder'=>'Enter your name', 'class'=>'form-control')) }}
 												</div>

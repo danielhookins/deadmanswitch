@@ -22,7 +22,7 @@
 							<h1><a href="{{ URL::to('/dashboard') }}">DMS</a></h1>
 						</div>
 					</div>
-				  <p class="navbar-text">Hello there {{ Auth::user()->name }}. [ <a href="{{ URL::to('/logout') }}">Log out</a> ]</p>
+				  <p class="navbar-text">Hello there {{ Auth::user()->name }}. [ <a href="{{ URL::to('logout') }}">Log out</a> ]</p>
 				  </div>
 				</nav>
 			</section> <!-- /.TOP-BAR -->
