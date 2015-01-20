@@ -7,7 +7,7 @@ class CheckinController extends BaseController {
 	
 		if (Auth::attempt(Input::only('email', 'password'))) 
 		{
-			return View::make('dashboard');
+			return Redirect::to('/dashboard');
 		}
 
 		return Redirect::to('/')
