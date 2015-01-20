@@ -19,3 +19,5 @@ Route::get('/logout', function()
 });	//TODO: Move to controller.
 
 Route::get('/dashboard', 'DashboardController@showDashboard');
+
+Route::get('/switches/create', 'SwitchController@showSwitchCreator');

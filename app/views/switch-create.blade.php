@@ -34,11 +34,11 @@
 					<!--LEFT-BAR -->
 					<div id="left-bar" class="col-md-3 sidebar-col">
 						<div class="list-group">
-						  <a href="{{ URL::to('/dashboard') }}" class="list-group-item active">
+						  <a href="{{ URL::to('/dashboard') }}" class="list-group-item">
 							<h4 class="list-group-item-heading">Dashboard</h4>
 						    <p class="list-group-item-text">Your Dead Man Switch summary.</p>
 						  </a>
-						  <a href="basic.php" class="list-group-item">
+						  <a href="basic.php" class="list-group-item active">
 							<h4 class="list-group-item-heading">Switches</h4>
 							<p class="list-group-item-text">The complete list of your switches.</p>
 						  </a>
@@ -56,49 +56,13 @@
 					<!--MAIN-CONTENT -->
 					<div id="main-content" class="col-md-8 main-col">
 						<ol class="breadcrumb">
-						  <li class="active"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <a href="{{ URL::to('/dashboard') }}">Dashboard</a></li>
+						  <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <a href="{{ URL::to('/dashboard') }}">Dashboard</a></li>
+						  <li><a href="/switches">Switches</a></li>
+						  <li class="active"><a href="/switches/create">Create New</li>
 						</ol>	
-
-						<p>Here is a summary of your account.</p>
 					
-						<div class="hover-table">
-							<h2 id="tables-hover-rows">Switches</h2>
-							<p>Here are all of your active and inactive switches.</p>
-							<div class="bs-example" data-example-id="hoverable-table">
-								<table class="table table-hover">
-									<thead>
-										<tr>
-											<th></th>
-											<th>Label</th>
-											<th>To Email</th>
-											<th>Status</th>
-											<th></th>
-											<th></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th scope="row"></th>
-											<td>Test message</td>
-											<td>danhookins@gmail.com</td>
-											<td><a href="#">Active</a></td>
-											<td>[<a href="#">edit</a>]</td>
-											<td>[<a href="#">delete</a>]</td>
-										</tr>
-										<tr>
-											<th scope="row"></th>
-											<td><a class="btn btn-default" href="{{ URL::to('/switches/create') }}" role="button"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Create new switch</a></td>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
-										</tr>
-										
-									</tbody>
-								</table>
-							</div>
 
-						</div>	
+						
 					</div><!-- /.MAIN-CONTENT -->
 			
 				</div>
