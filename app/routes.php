@@ -11,7 +11,7 @@ Route::get('/', 'HomeController@showWelcome');
 
 Route::resource('session', 'SessionController');
 Route::resource('user', 'UserController');
-Route::resource('switch', 'SwitchController');
+Route::resource('user.switch', 'SwitchController');
 
 Route::get('dashboard', 'DashboardController@showDashboard');
 Route::get('logout', 'SessionController@logout');
