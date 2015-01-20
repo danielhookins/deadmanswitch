@@ -16,20 +16,24 @@ class SignupController extends BaseController {
 
 		if ($validator->fails())
 		{
-		    return Redirect::to('/')->withErrors($validator);
+		    return Redirect::to('/')
+		    	->withErrors($validator)
+		    	->withInput(Input::except('password'));
 		}
 
 		// Create new user
 		$user = new User;
 		$user->email 		= Input::get('email');
-		$user->full_name 	= Input::get('full_name');
+		$user->name 		= Input::get('name');
 		$user->password   	= Hash::make(Input::get('password'));
 		$user->last_login	= \Carbon\Carbon::now();
 		$user->save();
+		
+		$successMsg = 'You have registered with the email address '.Input::get('email');			
 
-		$userEmail = Input::get('email');
+		Auth::login($user);
 
-		return "User registered with ".$userEmail; //TODO: change to message on new Dashboard
+		return Redirect::to('/dashboard')->with('message', $successMsg);
 	}
 
 }

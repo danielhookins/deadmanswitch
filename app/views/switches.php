@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Dead Man Switch - Dashboard</title>
-		<link href="{{ asset('_/css/bootstrap.css') }}" rel="stylesheet">
-		<link href="{{ asset('_/css/dashboard.css') }}" rel="stylesheet">
-		<link href="{{ asset('http://fonts.googleapis.com/css?family=Lato|Alegreya:400,700') }}" rel='stylesheet' type='text/css'>
+		<title>Dashboard - Tables</title>
+		<link href="_/css/bootstrap.css" rel="stylesheet">
+		<link href="_/css/dashboard.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lato|Alegreya:400,700' rel='stylesheet' type='text/css'>
 	</head>
+	
 	<body>
 		
 		<div class="wrapper">
@@ -22,7 +23,7 @@
 							<h1><a href="index.php">DMS</a></h1>
 						</div>
 					</div>
-				  <p class="navbar-text">Hello there {{ Auth::user()->name }}. [ <a href="{{ URL::to('/logout') }}">Log out</a> ]</p>
+				  <p class="navbar-text">Hello there {{ Auth::user()->name. [ <a href="{{ URL::to('/logout') }}">Log out</a> ]</p>
 				  </div>
 				</nav>
 			</section> <!-- /.TOP-BAR -->
@@ -35,21 +36,21 @@
 					<!--LEFT-BAR -->
 					<div id="left-bar" class="col-md-3 sidebar-col">
 						<div class="list-group">
-						  <a href="index.php" class="list-group-item active">
+						  <a href="index.php" class="list-group-item">
 							<h4 class="list-group-item-heading">Dashboard</h4>
-						    <p class="list-group-item-text">Your Dead Man Switch summary.</p>
+						    <p class="list-group-item-text">A summary of your app data</p>
 						  </a>
-						  <a href="basic.php" class="list-group-item">
+						  <a href="basic.php" class="list-group-item active">
 							<h4 class="list-group-item-heading">Switches</h4>
-							<p class="list-group-item-text">The complete list of your switches.</p>
+							<p class="list-group-item-text">This is just your stock-standard basic table.</p>
 						  </a>
 						  <a href="striped.php" class="list-group-item">
 							<h4 class="list-group-item-heading">Messages</h4>
-							<p class="list-group-item-text">The messages that are attached to your switches.</p>
+							<p class="list-group-item-text">This table has striped rows so you can read the content easier.</p>
 						  </a>
 						  <a href="bordered.php" class="list-group-item">
 							<h4 class="list-group-item-heading">Settings</h4>
-							<p class="list-group-item-text">Change your user / application settings.</p>
+							<p class="list-group-item-text">This table has a light rounded border.</p>
 						  </a>
 						</div>
 					</div><!-- /.LEFT-BAR -->
@@ -57,11 +58,11 @@
 					<!--MAIN-CONTENT -->
 					<div id="main-content" class="col-md-8 main-col">
 						<ol class="breadcrumb">
-						  <li class="active"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <a href="#">Dashboard</a></li>
-						  <li ></li>
+						  <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <a href="index.php">Dashboard</a></li>
+						  <li class="active"><a href="#">Switches</a></li>
 						</ol>	
 
-						<p>Hey there.  Here is a summary of your account.</p>
+						<p>T-bone ground round doner shoulder corned beef kielbasa spare ribs tail. Pork belly shank rump sirloin hamburger.</p>
 					
 						<div class="hover-table">
 							<h2 id="tables-hover-rows">Switches</h2>
@@ -110,8 +111,7 @@
 			</div> <!-- /.container -->
 		</footer> <!-- /.FOOTER-BAR -->
 
-		<!-- SCRIPTS -->
-		<script src="{{ asset('_/js/bootstrap.js') }}"></script>
-		<script src="{{ asset('_/js/dashboard.js') }}"></script>
+		<script src="_/js/bootstrap.js"></script>
+		<script src="_/js/dashboard.js"></script>
 	</body>
 </html>
