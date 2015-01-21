@@ -6,7 +6,7 @@ class DashboardController extends BaseController {
 	{
 		if(Auth::check()) 
 		{
-			return View::make('dashboard');
+			return View::make('home');
 		}
 		return Redirect::to('/')->with('message', 'You must log in first.');
 	}
