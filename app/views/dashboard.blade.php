@@ -42,10 +42,6 @@
 							<h4 class="list-group-item-heading">Switches</h4>
 							<p class="list-group-item-text">The complete list of your switches.</p>
 						  </a>
-						  <a href="striped.php" class="list-group-item">
-							<h4 class="list-group-item-heading">Messages</h4>
-							<p class="list-group-item-text">The messages that are attached to your switches.</p>
-						  </a>
 						  <a href="bordered.php" class="list-group-item">
 							<h4 class="list-group-item-heading">Settings</h4>
 							<p class="list-group-item-text">Change your user / application settings.</p>
