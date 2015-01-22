@@ -41,7 +41,7 @@
 							<h4 class="list-group-item-heading">Dashboard</h4>
 						    <p class="list-group-item-text">Your Dead Man Switch summary.</p>
 						  </a>
-						  <a href="basic.php" class="list-group-item">
+						  <a href="{{ URL::route('user.switch.index', Auth::user()->id) }}" class="list-group-item">
 							<h4 class="list-group-item-heading">Switches</h4>
 							<p class="list-group-item-text">The complete list of your switches.</p>
 						  </a>
