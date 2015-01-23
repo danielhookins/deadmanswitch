@@ -10,7 +10,7 @@ class SwitchController extends \BaseController {
 	public function index($user_id)
 	{
 		// TODO: Ensure only the user's switches are shwown
-		return View::make('switches')
+		return View::make('switch-list')
 			-> with($user_id);
 	}
 
@@ -20,9 +20,10 @@ class SwitchController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create($user_id)
 	{
-		//
+		return View::make('new-switch')
+			-> with($user_id);
 	}
 
 

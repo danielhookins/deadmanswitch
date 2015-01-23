@@ -5,6 +5,7 @@ Dashboard
 @stop 
 
 @section('styles')
+<link href="{{ asset('_/css/dashboard.css') }}" rel="stylesheet">
 @stop
 
 @section('main-content')

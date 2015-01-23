@@ -1,3 +1,5 @@
+<?php $user_id = Auth::user()->id; ?> 
+
 @extends('layouts.dashboard')
 
 @section('title')
@@ -14,5 +16,5 @@ Your Switches
 
 @section('breadcrumbs')
 <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> <a href="{{ URL::to('/dashboard') }}">Dashboard</a></li>
-<li class="active">{{ HTML::linkRoute('user.switch.index', 'Your Switches', Auth::user()->id) }}"></li>
+<li class="active">{{ HTML::linkRoute('user.switch.index', 'Your Switches', $user_id) }}"></li>
 @stop

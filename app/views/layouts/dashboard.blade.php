@@ -1,3 +1,5 @@
+<?php $user_id = Auth::user()->id; ?> 
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
