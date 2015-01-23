@@ -7,7 +7,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Dead Man Switch - @yield('title')</title>
-		
 		<link href="{{ asset('_/css/bootstrap.css') }}" rel="stylesheet">
 		<link href="{{ asset('_/css/dashboard.css') }}" rel="stylesheet">
 		<link href="{{ asset('http://fonts.googleapis.com/css?family=Lato|Alegreya:400,700') }}" rel='stylesheet' type='text/css'>
