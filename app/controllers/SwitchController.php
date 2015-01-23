@@ -22,7 +22,7 @@ class SwitchController extends \BaseController {
 	 */
 	public function create($user_id)
 	{
-		return View::make('new-switch')
+		return View::make('switch-new')
 			-> with($user_id);
 	}
 
@@ -56,9 +56,10 @@ class SwitchController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($user_id, $switch_id)
 	{
-		//
+		return View::make('switch-edit')
+			-> with($user_id);
 	}
 
 

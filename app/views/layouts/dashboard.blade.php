@@ -43,15 +43,15 @@
 							<h4 class="list-group-item-heading">Dashboard</h4>
 						    <p class="list-group-item-text">Your Dead Man Switch summary.</p>
 						  </a>
-						  <a href="{{ URL::route('user.switch.create', Auth::user()->id) }}" class="list-group-item">
+						  <a href="{{ URL::route('user.switch.create', $user_id) }}" class="list-group-item">
 							<h4 class="list-group-item-heading">New Switch</h4>
 							<p class="list-group-item-text">Create a new switch.</p>
 						  </a>
-						  <a href="{{ URL::route('user.switch.index', Auth::user()->id) }}" class="list-group-item">
+						  <a href="{{ URL::route('user.switch.index', $user_id) }}" class="list-group-item">
 							<h4 class="list-group-item-heading">Your Switches</h4>
 							<p class="list-group-item-text">View, edit or delete your switches.</p>
 						  </a>
-						  <a href="{{ URL::route('user.settings.index', Auth::user()->id) }}" class="list-group-item">
+						  <a href="{{ URL::route('user.settings.index', $user_id) }}" class="list-group-item">
 							<h4 class="list-group-item-heading">Settings</h4>
 							<p class="list-group-item-text">Change your user / application settings.</p>
 						  </a>
