@@ -31,6 +31,7 @@ Edit Switch
 			  </div>
 			  <div class="form-group form-inline">
 				<button type="submit" class="btn btn-primary">Submit</button>
+				<a class="btn btn-danger" href="{{ URL::previous() }}">Cancel</a>
 				<div class="btn-group pull-right" data-toggle="buttons">
 				  <label class="btn btn-default active">
 					<input type="radio" name="options" id="option1" autocomplete="off" checked>Active

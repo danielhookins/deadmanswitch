@@ -36,7 +36,7 @@ Your Switches
 				</tr>
 				<tr>
 					<th scope="row"></th>
-					<td><a class="btn btn-default" href="{{ URL::to('/switches/create') }}" role="button"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Create new switch</a></td>
+					<td><a class="btn btn-default" href="{{ URL::route('user.switch.create', $user_id) }}" role="button"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Create new switch</a></td>
 					<td></td>
 					<td></td>
 					<td></td>
