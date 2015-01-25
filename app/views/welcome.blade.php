@@ -10,7 +10,7 @@ Check in or Sign up
 	<p>Check in to let the system know that everything is okay.</p>
 	<p>The Dead Man Switch is a fail-safe messaging application that will send your pre-written message if you fail to check in with the system every 7 days.</p>
 	<div class="text-center">
-		<a class="learn-more-btn" href="#">Learn more</a>
+		<a class="learn-more-btn" href="{{ URL::to('/learn-more') }}">Learn more</a>
 	</div>
 </div>
 @stop

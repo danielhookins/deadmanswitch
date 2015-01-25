@@ -8,6 +8,7 @@ Route::get('coming-soon', function()
 	return View::make('coming-soon');
 });
 Route::get('/', 'WelcomeController@showWelcome');
+Route::get('/learn-more', 'WelcomeController@showLearnMore');
 
 Route::resource('session', 'SessionController');
 Route::resource('user', 'UserController');

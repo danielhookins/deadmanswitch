@@ -12,4 +12,9 @@ class WelcomeController extends BaseController {
 		return View::make('welcome');
 	}
 
+	public function showLearnMore()
+	{
+		return View::make('learn-more');
+	}
+
 }
