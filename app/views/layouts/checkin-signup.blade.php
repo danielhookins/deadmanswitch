@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Dead Man Switch - Check in or Sign up</title>
+		<title>Dead Man Switch - @yield('title')</title>
 		<link href="{{ asset('_/css/bootstrap.css') }}" rel="stylesheet">
 		<link href="{{ asset('_/css/checkin-signup.css') }}" rel="stylesheet">
 		<link href="{{ asset('http://fonts.googleapis.com/css?family=Lato|Alegreya:400,700') }}" rel='stylesheet' type='text/css'>
@@ -36,14 +36,7 @@
 				<div class="container main-content">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="col-md-9 col-md-offset-4 welcome-box">
-								<h2>Nice to see you.</h2>
-								<p>Check in to let the system know that everything is okay.</p>
-								<p>The Dead Man Switch is a fail-safe messaging application that will send your pre-written message if you fail to check in with the system every 7 days.</p>
-								<div class="text-center">
-									<a class="learn-more-btn" href="#">Learn more</a>
-								</div>
-							</div>
+							@yield('left-column-content')
 						</div>
 						<div class="col-md-6">
 							<div class="row">

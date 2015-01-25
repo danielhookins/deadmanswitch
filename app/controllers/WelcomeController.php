@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class WelcomeController extends BaseController {
 
 	public function showWelcome()
 	{
@@ -9,7 +9,7 @@ class HomeController extends BaseController {
 		    //echo Session::get('message');
 		    // TODO: Pass $message variable to view from this controller
 		}
-		return View::make('checkin-signup');
+		return View::make('welcome');
 	}
 
 }
