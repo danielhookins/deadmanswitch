@@ -58,6 +58,8 @@ html, body {
   }
 }
 
+/* Welcome Box */
+
 .welcome-box h2 {
   color: #fff;
   font-size: 38px;
@@ -100,6 +102,23 @@ html, body {
 .learn-more-btn:hover {
   color: #000;
   background: #fff;
+}
+
+/* Learn More Box */
+
+.learn-more-box h2 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 44px;
+  margin-bottom: 30px;
+  text-shadow: none;
+}
+
+.learn-more-box p {
+  color: #fff;
+  font-size: 21px;
+  line-height: 31px;
+  text-shadow: none;
 }
 
 /* FOOTER */
