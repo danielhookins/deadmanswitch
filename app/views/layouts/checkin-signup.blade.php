@@ -11,6 +11,19 @@
 	</head>
 	<body>
 		<div class="wrapper">
+
+			<!--TOP-BAR -->
+			<section id="top-bar">
+				<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<div class="logo">
+						<h1><a href="{{ URL::to('/') }}">DMS</a></h1>
+					</div>
+				</div>
+				</nav>
+			</section> 
+			<!-- /.TOP-BAR -->
+
 			<!-- MESSAGES -->
 			<section id="messages">
 				@if (Session::has('message'))
