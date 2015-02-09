@@ -20,9 +20,19 @@
 						{!! Form::textarea('text', Input::old('text'), array('id'=>'text', 'class'=>'form-control', 'required'=>'required', 'rows'=>'10', 'autofocus'=>'autofocus')) !!}
 					  </div>
 					  <div class="form-group form-inline">
-						{!! Form::submit('Update switch', ['class'=>'btn btn-success']) !!}
-						<a class="btn btn-danger" href="javascript:history.go(-1)">Cancel</a>
-					  </div>
+							{!! Form::submit('Update switch', ['class'=>'btn btn-success']) !!}
+							<a class="btn btn-danger" href="javascript:history.go(-1)">Cancel</a>
+						  
+							<div class="btn-group pull-right" data-toggle="buttons">
+								<label class="btn btn-default {{ (($switch->status == 1) ? 'active' : '') }}">
+								<input type="radio" name="status" value="1" id="activeSwitch" autocomplete="off">Active
+							</label>
+							<label class="btn btn-default {{ (($switch->status == 0) ? 'active' : '') }}">
+								<input type="radio" name="status" value="0" id="disabledSwitch" autocomplete="off"> Disabled
+							</label>
+						  </div>
+
+					  </div><!--/form-inline-->
 					{!! Form::close() !!}
 					</div><!--/panel-body -->
 				</div><!--/panel-->

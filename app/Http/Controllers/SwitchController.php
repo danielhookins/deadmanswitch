@@ -50,13 +50,14 @@ class SwitchController extends Controller {
 		//TODO: Ensure validation
 
         $switch = \App\DMSwitch::create([
-	        'title' => \Input::get('title'), 
-	        'text' => \Input::get('text'), 
-	        'user_id' => \Auth::user()->id
+	        'title' 	=> \Input::get('title'), 
+	        'text' 		=> \Input::get('text'), 
+	        'user_id' 	=> \Auth::user()->id,
+	        'status' 	=> \Input::get('status')
         ]);
         
-		return redirect('/')
-			->with('Switch', 'Your Switch has been saved!');
+		return redirect('/home')
+			->with('message', 'Your Switch has been saved!');
 	}
 
 	/**
@@ -110,10 +111,11 @@ class SwitchController extends Controller {
         
 		$switch->title = \Input::get('title');
 		$switch->text = \Input::get('text'); 
+		$switch->status = \Input::get('status');
 	    $switch->save();
         
-		return redirect('/')
-			->with('switch', 'Your Switch has been saved!');
+		return redirect('/home')
+			->with('message', 'Your Switch has been updated!');
 	}
 
 	/**
@@ -137,7 +139,7 @@ class SwitchController extends Controller {
 			\App\DMSwitch::destroy($id);
 
 			return redirect('home')
-			->with('switch', 'Your Switch has been deleted!');
+			->with('message', 'Your Switch has been deleted!');
 		}
 
 		return redirect('home');

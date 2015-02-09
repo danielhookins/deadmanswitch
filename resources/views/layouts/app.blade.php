@@ -57,19 +57,27 @@
 		</div>
 	</nav>
 
-	<div class="container"><!--Display Error Messages-->
-		@if (count($errors) > 0)
-			<div class="alert alert-danger alert-dismissible" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong>Whoa!</strong> Hang on a sec.<br><br>
-				<ul>
-					@foreach ($errors->all() as $error)
-						<li>{{ $error }}</li>
-					@endforeach
-				</ul>
+	<!-- MESSAGES -->
+	<!-- TODO: make these look nicer -->
+	<section id="messages">
+		@if (\Session::has('message'))
+			<div class="alert alert-info alert-dismissible" role="alert">
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <p>{{ \Session::get('message') }}</p>
 			</div>
 		@endif
-	</div><!--/Error Messages-->
+		@if ($errors)
+			@if ($errors->has())
+	        <div class="alert alert-warning alert-dismissible" role="alert">
+		  		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	            <strong>Oops... </strong> 
+	            @foreach ($errors->all() as $error)
+	                {{ $error }}<br>        
+	            @endforeach
+	        </div>
+	        @endif
+		@endif
+	</section> <!-- /.MESSAGES -->
 
 	@yield('content')
 

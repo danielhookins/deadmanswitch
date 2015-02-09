@@ -15,8 +15,19 @@
 
 		  <div class="form-group form-inline">
 				<button type="submit" class="btn btn-success">Save</button>
+				
+				<!--TODO: Remove cancel button if on /home page-->
 				<a class="btn btn-danger" href="javascript:history.go(-1)">Cancel</a>
-		  </div>
+		  
+			  <div class="btn-group pull-right" data-toggle="buttons">
+				<label class="btn btn-default active">
+					<input type="radio" name="status" value="1" id="activeSwitch" autocomplete="off" checked>Active
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="status" value="0" id="disabledSwitch" autocomplete="off"> Disabled
+				</label>
+			  </div>
+			</div> <!--/form-inline-->
 
   	</form>
 	</div><!--/panel-body -->
