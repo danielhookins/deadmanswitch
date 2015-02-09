@@ -10,14 +10,17 @@
 		  </div>
 
 		  <div class="form-group">
+				<label class="sr-only control-label">To Email</label>
+				<input type="text" class="form-control" name="to_email" value="{{ old('to_email') }}" placeholder="To Email" autofocus>
+		  </div>
+
+		  <div class="form-group">
 				<textarea class="form-control" name="text" rows="10">{{ old('text') }}</textarea>
 		  </div>
 
 		  <div class="form-group form-inline">
 				<button type="submit" class="btn btn-success">Save</button>
-				
-				<!--TODO: Remove cancel button if on /home page-->
-				<a class="btn btn-danger" href="javascript:history.go(-1)">Cancel</a>
+				<a class="btn btn-danger" href="/home">Cancel</a>
 		  
 			  <div class="btn-group pull-right" data-toggle="buttons">
 				<label class="btn btn-default active">

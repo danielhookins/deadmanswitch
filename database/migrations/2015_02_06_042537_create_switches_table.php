@@ -17,6 +17,7 @@ class CreateSwitchesTable extends Migration {
 				$table -> increments('id');
 				$table -> integer('user_id');
 				$table -> string('title', 127);
+				$table -> string('to_email');
 				$table -> text('text');
 				$table -> integer('status');
 				$table -> timestamps();

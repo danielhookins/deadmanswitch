@@ -13,6 +13,7 @@ class DMSwitch extends Model {
 
 	protected $fillable = [
 	'title',
+	'to_email',
 	'text',
 	'user_id',
 	'status'

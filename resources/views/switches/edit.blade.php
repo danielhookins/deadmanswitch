@@ -17,6 +17,9 @@
 						{!! Form::text('title', Input::old('title'), array('id'=>'title', 'class'=>'form-control', 'required'=>'required')) !!}
 					  </div>
 					  <div class="form-group">
+						{!! Form::text('to_email', Input::old('to_email'), array('id'=>'to_email', 'class'=>'form-control', 'required'=>'required')) !!}
+					  </div>
+					  <div class="form-group">
 						{!! Form::textarea('text', Input::old('text'), array('id'=>'text', 'class'=>'form-control', 'required'=>'required', 'rows'=>'10', 'autofocus'=>'autofocus')) !!}
 					  </div>
 					  <div class="form-group form-inline">

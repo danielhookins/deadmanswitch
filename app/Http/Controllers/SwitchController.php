@@ -50,7 +50,8 @@ class SwitchController extends Controller {
 		//TODO: Ensure validation
 
         $switch = \App\DMSwitch::create([
-	        'title' 	=> \Input::get('title'), 
+	        'title' 	=> \Input::get('title'),
+	        'to_email'	=> \Input::get('to_email'), 
 	        'text' 		=> \Input::get('text'), 
 	        'user_id' 	=> \Auth::user()->id,
 	        'status' 	=> \Input::get('status')
@@ -109,9 +110,10 @@ class SwitchController extends Controller {
 
         $switch = \App\DMSwitch::find($id);
         
-		$switch->title = \Input::get('title');
-		$switch->text = \Input::get('text'); 
-		$switch->status = \Input::get('status');
+		$switch->title 		= \Input::get('title');
+		$switch->to_email 	= \Input::get('to_email');
+		$switch->text 		= \Input::get('text'); 
+		$switch->status 	= \Input::get('status');
 	    $switch->save();
         
 		return redirect('/home')
