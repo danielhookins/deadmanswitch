@@ -7,7 +7,8 @@
         <tr>
           <th></th>
           <th>Switch Title</th>
-          <th>Created</th>
+          <th>To Email</th>
+          <th>Status</th>
           <th>Updated</th>
           <th></th>
           <th></th>
@@ -18,7 +19,8 @@
         <tr>
           <td><!--{{ $switch->id }}--></td>
           <th scope="row"><a href="/switch/{{ $switch->id }}">{{ $switch->title }}</a></th>
-          <td>{{ $switch->created_at }}</td>
+          <td>{{ $switch->to_email }}</td>
+          <td>{{ (($switch->status == 1) ? 'Active' : 'Disabled') }}</td>
           <td>{{ $switch->updated_at }}</td>
           <td>[ <a href="/switch/{{ $switch->id }}/edit">Edit</a> ]</td>
           <td>[ <a href="/switch/{{ $switch->id }}/delete">Delete</a> ]</td>
