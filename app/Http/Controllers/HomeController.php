@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
+use Carbon\Carbon;
 
 class HomeController extends Controller {
+
 
 	/*
 	|--------------------------------------------------------------------------
@@ -29,7 +31,14 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		$switches = \App\DMSwitch::where('user_id', \Auth::user()->id)->get();
+
+		//update 'last_active' in DB
+		$user = \App\User::find(\Auth::user()->id);
+
+		$user->last_active = Carbon::now();
+		$user->save();
+
+		$switches = \App\DMSwitch::where('user_id', $user->id)->get();
 
 		return view('home', array('switches' => $switches));
 	}
