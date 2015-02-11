@@ -33,9 +33,10 @@ class HomeController extends Controller {
 	{
 
 		//update 'last_active' in DB
-		$user = \App\User::find(\Auth::user()->id);
+		$date = Carbon::now();
 
-		$user->last_active = Carbon::now();
+		$user = \App\User::find(\Auth::user()->id);
+		$user->last_active = $date;
 		$user->save();
 
 		$switches = \App\DMSwitch::where('user_id', $user->id)->get();
