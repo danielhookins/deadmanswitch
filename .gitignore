@@ -1,3 +1,4 @@
 /vendor
 /node_modules
 .env
+cron_preferences.php

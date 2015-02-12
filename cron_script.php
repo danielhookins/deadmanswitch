@@ -1,18 +1,16 @@
 <?php
-// DEAD MAN SWITCH: CRON SCRIPT
-// Point your a cron job to this file.
+//  DEAD MAN SWITCH: CRON SCRIPT
+ 
+// Install Instructions
+// 1. Update preferences file.
+// 2. Point your a cron job to this file.
 
 // CONFIG
-$username = "root";
-$password = "";
-$hostname = "localhost";
-
+require_once 'vendor/swiftmailer/swiftmailer/lib/swift_required.php';
+require_once 'cron_preferences.php';
 $mysqli = new mysqli($hostname, $username, $password, "deadmanswitch");
-
 $users = array();
-
 $now = new DateTime();
-
 
 // CONNECT TO DB OR EXIT
 if ($mysqli->connect_errno) {
@@ -21,7 +19,6 @@ if ($mysqli->connect_errno) {
 }
 
 // CHECK USERS WHO FAILED TO CHECK IN > 7 days ago
-
 $userSelectQuery    = "SELECT id, last_active FROM users"; 
 
 if ($userResult = $mysqli->query($userSelectQuery)) {
@@ -53,8 +50,35 @@ foreach($users as $user) {
     /* fetch associative array */
     while ($row = $switchResult->fetch_assoc()) {
        
-        print_r($row);
-        // TODO: Send Email
+        $mailer = Swift_Mailer::newInstance($transport);
+
+        $to_email = $row['to_email'];
+        $text = $row['text'];
+
+        //SEND EMAIL
+        // Create the message using Swift Mailer
+        $message = Swift_Message::newInstance()
+          ->setSubject('A fail-safe message to you has been activated.')
+          ->setFrom(array($fromEmail => 'DMS Failsafe'))
+          ->setTo(array($to_email))
+          ->setBody(
+        '<html>' .
+        ' <head><title>DMS: Fail-Safe Message Activated</title></head>' .
+        ' <body>' .
+        '   <p><strong>A fail-safe message to you has been activated.</strong></p>' .
+        '   <p>' . $text . '</p' .
+        '   <p>---</p><br /> ' .
+        '   <p>This is a fail-safe messenger service by <a href="http://deadmanswitch.hoodev.com">HooDev: Dead Man Switch</a></p>' .
+        ' </body>' .
+        '</html>',
+        'text/html'
+        )
+          ->setReturnPath($returnPath);
+
+        // Send the message
+        $result = $mailer->send($message);
+
+        echo $result;
 
         // TODO: Change status to 3 ('Message Sent')
 
@@ -69,4 +93,3 @@ foreach($users as $user) {
 
 /* close connection */
 $mysqli->close();
-?>
