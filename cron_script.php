@@ -2,7 +2,8 @@
 //  DEAD MAN SWITCH: CRON SCRIPT
  
 // Install Instructions
-// 1. Update preferences file.
+// 1. Update preferences file. 
+//  (save as: cron_preferences.php)
 // 2. Point your a cron job to this file.
 
 // CONFIG
@@ -43,7 +44,7 @@ if ($userResult = $mysqli->query($userSelectQuery)) {
 // ITERATE THROUGH VALID USERS
 foreach($users as $user) {
 	
-    $switchSelectQuery  = "SELECT id, user_id, to_email, text, status FROM switches WHERE user_id = ".$user." AND status =1";
+    $switchSelectQuery  = "SELECT id, user_id, to_email, title, text, status FROM switches WHERE user_id = ".$user." AND status =1";
 
     if ($switchResult = $mysqli->query($switchSelectQuery)) {
 
@@ -78,15 +79,18 @@ foreach($users as $user) {
         // Send the message
         $result = $mailer->send($message);
 
-        echo $result;
+        // Set switch status to 3 ('Message Sent')
+        $updateStatusQuery = "UPDATE switches SET status=3 WHERE id=" . $row['id'];
 
-        // TODO: Change status to 3 ('Message Sent')
-
+        if ($switchStatusUpdate = $mysqli->query($updateStatusQuery)) {
+            echo 'Switch Status updated for: ' . $row['title'];
+        } else {
+            echo 'Error: Status not updated for: ' . $row['title'];
+        }
     }
 
     /* free result set */
     $switchResult->free();
-
     }
 
 }

@@ -9,5 +9,5 @@ $transport = Swift_SmtpTransport::newInstance('smtp.server', 25)
   ->setPassword('')
   ;
 
-$returnPath = ""; //bounced emails
+$returnPath = ""; //for bounced emails
 $fromEmail = "";
