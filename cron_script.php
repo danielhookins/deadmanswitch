@@ -29,8 +29,7 @@ if ($userResult = $mysqli->query($userSelectQuery)) {
         $last_active = new DateTime(Date($row["last_active"]));    	
     	$interval = $last_active->diff($now);
 
-    	// TODO: change back to 7 after debugging
-        if($interval->days >= 0) {
+        if($interval->days >= 7) {
     		// ADD USER ID TO ARRAY
     		$users[] = $row["id"];
     	}
